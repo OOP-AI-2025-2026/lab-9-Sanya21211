@@ -11,6 +11,9 @@ jobs:
   build:
     name: Compile + Tests + Static Analysis + ChatGPT
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
